@@ -40,7 +40,7 @@ Note that the file being output is slightly different than the one provided by N
 2. Update the data with mentor, mentee, relationship, grant, citation, etc. information
 3. Update the Grant ID. This specifies which ID in T32demo_grants should be called.
 4. Execute the query from your terminal. 
-5. Output the results as `FileName.xml.` Be sure not to use a comma as a delimiter. Tabs are okay.
+5. Output the results as `FileName.xml`, which is Office Open XML format. Be sure not to use a comma as a delimiter. Tabs are okay.
 6. Open this document in Microsoft Word. The file should look like `Table5a_SampleOutput.xml`
 
 

@@ -29,12 +29,14 @@ A lot of institutions already maintain structured identity and publication metad
   - T32demo_mentors_mentees: mentor/mentee relationships
   - T32demo_citation: citation information; there needs to be a unique record for each author; also the target author is demaracted by braces, e.g. `Ryter SW, Koo JK, {Choi AMK},`
 - **Query.sql** - a query for generating the Word XML
-- **Table5a_SampleOutput.xml** - the output that is generated when your run the above query against the above database
+- **Table5a_SampleOutput.xml** - the output that is generated when your run the above query against the above database 
+
+Note that the file being output is slightly different than the one provided by NIH. The Director of Weill Cornell's MD-PhD Program *swears* that reviewers prefer the minor tweaks that he made to this format. They particularly like the use of page numbers and how only one publication is on each line.
 
 
 ## Instructions
 
-1. Load `sampledb.sql` into your MySQL instance.
+1. Import `sampledb.sql` into your MySQL instance.
 2. Update the data with mentor, mentee, relationship, grant, citation, etc. information
 3. Update the Grant ID. This specifies which ID in T32demo_grants should be called.
 4. Execute the query from your terminal. 
@@ -45,5 +47,6 @@ A lot of institutions already maintain structured identity and publication metad
 
 ## Options
 
+- **Remove Person IDs** By default Person IDs are included. These can be commented out in lines 30 and 32 of the query.
 - **Group together multiple publications by a single author in a given cell.** This is commented out by default. The commented code in the below case statement allows you to group together citations in a single cell. Lines 45-51 and 72, when commented out, allow you to group together publications by the same author.
 - **Only include publications where both mentor and mentee are co-authors.** Line 69, when commented out, allows for this functionality.

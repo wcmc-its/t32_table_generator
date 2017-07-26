@@ -23,11 +23,11 @@ A lot of institutions already maintain structured identity and publication metad
 
 ## Included files
 - **Sampledb.sql**  - a database structure with sample data populated; this can be imported into your MySQL instance
-  - T32demo_mentors: identity info for mentors
-  - T32demo_mentees: identity info for mentees
-  - T32demo_grants: grants and mentors listed on the grants
-  - T32demo_mentors_mentees: mentor/mentee relationships
-  - T32demo_citation: citation information; there needs to be a unique record for each author; also the target author is demaracted by braces, e.g. `Ryter SW, Koo JK, {Choi AMK},`
+  - `T32demo_mentors`: identity info for mentors
+  - `T32demo_mentees`: identity info for mentees
+  - `T32demo_grants`: grants and mentors listed on the grants
+  - `T32demo_mentors_mentees`: mentor/mentee relationships
+  - `T32demo_citation`: citation information; there needs to be a unique record for each author; also the target author is demaracted by braces, e.g. `Ryter SW, Koo JK, {Choi AMK},`
 - **Query.sql** - a query for generating the Word XML
 - **Table5a_SampleOutput.xml** - the output that is generated when your run the above query against the above database 
 

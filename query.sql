@@ -43,10 +43,10 @@ years,
 case
     when c.citation is not null and c.authorListEtAl not like('{%') then /*group_concat(distinct*/ concat(
         replace(replace(c.authorListEtAl,'{',@t32_beforeBold),'}',@t32_afterBold),' ',
-        replace(replace(c.citation,'<','&lt;'),'>','&gt;')) /*order by citation asc separator '<w:br/><w:br/>' )*/
+        replace(replace(replace(replace(c.citation,'<','&lt;'),'>','&gt;'),"\'",'&apos;'),'&','&#38;'))  /*order by citation asc separator '<w:br/><w:br/>' )*/
     when c.citation is not null and c.authorListEtAl like('{%') then /*group_concat(distinct*/ concat(
         replace(replace(c.authorListEtAl,'{',@t32_beforeBoldWhiteSpace),'}',@t32_afterBold),' ',
-        replace(replace(c.citation,'<','&lt;'),'>','&gt;')) /*order by citation asc separator '<w:br/><w:br/>' )*/
+        replace(replace(replace(replace(c.citation,'<','&lt;'),'>','&gt;'),"\'",'&apos;'),'&','&#38;'))  /*order by citation asc separator '<w:br/><w:br/>' )*/
     else 'No publications'
 end,    
 
